@@ -310,8 +310,8 @@ html, body {
 }
 
 .ios-mockup {
-  width: 204px;
-  height: 427px;
+  width: 202px;
+  height: 423px;
   background: url("../images/ios.png") no-repeat center/cover;
   position: absolute;
   top: 4px;
