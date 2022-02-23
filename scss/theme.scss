@@ -1,0 +1,313 @@
+     /*
+reast
+***********************************/
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 1rem;
+}
+a{
+	// color: $link-color;
+    text-decoration: none;
+	&:hover,&:focus,&:active{
+		text-decoration: none;
+		outline: none;
+	}
+}
+h1 {
+    font-size: 2.25rem;
+  }
+  
+  h2 {
+    font-size: 1.875rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+  }
+  
+  h5 {
+    font-size: 1.125rem;
+  }
+  
+  h6 {
+    font-size: 1rem;
+  }
+  
+  p {
+    font-size: .938rem;
+  }
+h1, h2, .h3, h4, h5, h6{
+	margin: 0;
+	font-family: inherit;
+    font-weight: 500;
+    line-height: 1.5;
+    color: inherit;
+}
+body{
+    line-height: 1.5;
+    background: #170E30;
+    font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+}
+html, body {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+// vh to px
+$screenwidth: 750;
+@function pxToVw($n) {
+  	@return unquote($n * 100/$screenwidth+'vw');
+}
+
+// 全域共用
+.img-responsive{
+    max-width: 100%;
+    height: auto;
+}
+
+.fullPage{
+    background: url("../images/bg.webp") no-repeat center/cover;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-attachment:scroll;
+    // overflow-y: scroll;
+}
+
+.app-download{
+    position: relative;
+    min-height: 75vh;
+    padding: 5.6vw 3vw 3vw 3vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    @media (max-width:1024px) {
+        text-align: center;
+        // padding: 4vh 5.6vw 0;
+        justify-content: center;
+    }
+}
+.navbar{
+    background: #fff;
+    padding: .25rem;
+    .logo{
+        height: 48px;
+    }
+}
+
+// section {
+//     position: relative;
+//     box-sizing: border-box;
+//     padding: 5.6vw;
+//     background-position: 50%;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+// }
+.content-top{
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    .title-box{
+        text-align: center;
+        margin-bottom: 2rem;
+        // letter-spacing: .25rem;
+        .title{
+            color: #fff;
+            font-size: 3.5rem;
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: .5rem;
+        }
+        .desc{
+            color: rgba(255, 255, 255, .5);
+            font-size: 1.125rem;
+        }
+    }
+}
+
+.download-box{
+    margin-bottom: 1.5rem;
+    .btn-group{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 3.5rem;
+        @media (max-width:568px){
+            flex-direction: column;
+        }
+        // .btn{
+        //     max-width: 240px;
+        //     margin: 0 auto;
+        //     @media (max-width:1024px){
+        //         max-width: inherit;
+        //     }
+        // }
+        .btn+.btn{
+            margin-left: 1.5rem;
+            @media (max-width:568px){
+                margin: 0;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+    .qrocde-group{
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (max-width:1024px) {
+            margin: 1rem;
+        }
+        .qrcode{
+            padding: .5rem;
+            border-radius: 8px;
+            background: #fff;
+        }
+        .text{
+            margin: .5rem 0;
+        }
+    }
+}
+
+.icon-ios{
+    display: flex;
+    align-items: center;
+    margin-right: .5rem;
+    &::after{
+        content: " ";
+        background-image: url("../images/icon-apple.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: inline-block;
+        width:32px;
+        height: 32px;
+        transition: all .3s; 
+    }
+}
+.icon-android{
+    display: flex;
+    align-items: center;
+    margin-right: .5rem;
+    &::after{
+        content: " ";
+        background-image: url("../images/icon-android.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: inline-block;
+        width:32px;
+        height: 32px;
+    }
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    font-size: 1.125rem;
+    transition: all .3s;
+    border-radius: 36px;
+    color: #fff;
+    width: 232px;
+    @media (max-width:568px){
+        margin: 0;
+        margin-top: 1.5rem;
+    }
+}
+
+.btn-ios{
+    background-size: 300% 300%;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    background-image: linear-gradient(135deg, #D24CEB 0%, #FF879D 50%, #D24CEB 100%);
+    // background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);
+    &:hover{
+        background-position: right center;
+    }
+}
+
+.btn-android{
+    background-size: 300% 300%;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    background-image: linear-gradient(135deg, #2083FF 0%, #71FFEE 50%, #2083FF 100%);
+    // background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);
+    &:hover{
+        background-position: right center;
+    }
+}
+
+.ios-mockup{
+    width: 204px;
+    // width: calc(100% / 5 - 4px);
+    height: 427px;
+    // height: 0;
+    // padding-bottom: calc((100% / 5 - 4px) * 2.09523);
+    background: url("../images/ios.png") no-repeat center/cover;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 2;
+    // transform: translate(-50%, 0);
+}
+
+.swiper {
+    width: 100%;
+    // height: 300px;
+}
+.content-middle{
+    width: 1040px;
+    margin: 0 auto;
+    overflow: hidden;
+    // @media (max-width:1040px) {
+    //     width: 100%;
+    // }
+    // @media (max-width:1081px) {
+    //     width: 100%;
+    // }
+    
+    // @media (max-width:1024px) {
+    //     width: 80%;
+    // }
+    // @media (max-width:1076px) {
+    //     width: 100%;
+    // }
+    @media (max-width:1200px) {
+        width: 100%;
+    }
+    .slider-wrap{
+        width: 1040px;
+        margin: 0 auto;
+        @media (max-width:1110px) {
+            width: 626px;
+        }
+        @media (max-width:768px) {
+            width: 100%;
+        }
+        // @media (min-width: 1025px) and (max-width: 1039px) {
+        //     width: 100%;
+        // }
+        img{
+            max-width: 100%;
+            vertical-align: middle;
+        }
+    }
+    .swiper-wrapper {
+        // width: 1020px;
+        // height: 365px;
+        margin: 45px auto 40px auto;
+    }
+}

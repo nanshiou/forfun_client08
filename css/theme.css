@@ -1,0 +1,365 @@
+@charset "UTF-8";
+/*
+reast
+***********************************/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  outline: none;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: .938rem;
+}
+
+h1, h2, .h3, h4, h5, h6 {
+  margin: 0;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.5;
+  color: inherit;
+}
+
+body {
+  line-height: 1.5;
+  background: #170E30;
+  font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+}
+
+html, body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.fullPage {
+  background: url("../images/bg.webp") no-repeat center/cover;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-attachment: scroll;
+}
+
+.app-download {
+  position: relative;
+  min-height: 75vh;
+  padding: 5.6vw 3vw 3vw 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .app-download {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.navbar {
+  background: #fff;
+  padding: .25rem;
+}
+
+.navbar .logo {
+  height: 48px;
+}
+
+.content-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-top .title-box {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.content-top .title-box .title {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: .5rem;
+}
+
+.content-top .title-box .desc {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.125rem;
+}
+
+.download-box {
+  margin-bottom: 1.5rem;
+}
+
+.download-box .btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 568px) {
+  .download-box .btn-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.download-box .btn-group .btn + .btn {
+  margin-left: 1.5rem;
+}
+
+@media (max-width: 568px) {
+  .download-box .btn-group .btn + .btn {
+    margin: 0;
+    margin-top: 1.5rem;
+  }
+}
+
+.download-box .qrocde-group {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .download-box .qrocde-group {
+    margin: 1rem;
+  }
+}
+
+.download-box .qrocde-group .qrcode {
+  padding: .5rem;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.download-box .qrocde-group .text {
+  margin: .5rem 0;
+}
+
+.icon-ios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: .5rem;
+}
+
+.icon-ios::after {
+  content: " ";
+  background-image: url("../images/icon-apple.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.icon-android {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: .5rem;
+}
+
+.icon-android::after {
+  content: " ";
+  background-image: url("../images/icon-android.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 12px 16px;
+  font-size: 1.125rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-radius: 36px;
+  color: #fff;
+  width: 232px;
+}
+
+@media (max-width: 568px) {
+  .btn {
+    margin: 0;
+    margin-top: 1.5rem;
+  }
+}
+
+.btn-ios {
+  background-size: 300% 300%;
+  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  background-image: linear-gradient(135deg, #D24CEB 0%, #FF879D 50%, #D24CEB 100%);
+}
+
+.btn-ios:hover {
+  background-position: right center;
+}
+
+.btn-android {
+  background-size: 300% 300%;
+  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  background-image: linear-gradient(135deg, #2083FF 0%, #71FFEE 50%, #2083FF 100%);
+}
+
+.btn-android:hover {
+  background-position: right center;
+}
+
+.ios-mockup {
+  width: 204px;
+  height: 427px;
+  background: url("../images/ios.png") no-repeat center/cover;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 2;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.content-middle {
+  width: 1040px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .content-middle {
+    width: 100%;
+  }
+}
+
+.content-middle .slider-wrap {
+  width: 1040px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1110px) {
+  .content-middle .slider-wrap {
+    width: 626px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-middle .slider-wrap {
+    width: 100%;
+  }
+}
+
+.content-middle .slider-wrap img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.content-middle .swiper-wrapper {
+  margin: 45px auto 40px auto;
+}
+/*# sourceMappingURL=theme.css.map */
