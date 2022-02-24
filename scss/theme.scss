@@ -272,19 +272,6 @@ $screenwidth: 750;
     width: 1040px;
     margin: 0 auto;
     overflow: hidden;
-    // @media (max-width:1040px) {
-    //     width: 100%;
-    // }
-    // @media (max-width:1081px) {
-    //     width: 100%;
-    // }
-    
-    // @media (max-width:1024px) {
-    //     width: 80%;
-    // }
-    // @media (max-width:1076px) {
-    //     width: 100%;
-    // }
     @media (max-width:1200px) {
         width: 100%;
     }
@@ -297,17 +284,13 @@ $screenwidth: 750;
         @media (max-width:768px) {
             width: 100%;
         }
-        // @media (min-width: 1025px) and (max-width: 1039px) {
-        //     width: 100%;
-        // }
         img{
             max-width: 100%;
             vertical-align: middle;
         }
     }
     .swiper-wrapper {
-        // width: 1020px;
-        // height: 365px;
+
         margin: 45px auto 40px auto;
     }
 }
